@@ -1,11 +1,8 @@
 import axios from 'axios';
 import {GetStaticProps} from 'next';
 import Head from 'next/head';
-
-type BlogType = {
-  id: string;
-  title: string;
-};
+import {EntryList} from '../components/EntryList';
+import {BlogType} from '../types/BlogType';
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await axios.get(
@@ -29,9 +26,7 @@ const Index: React.FC<{blogs: BlogType[]}> = ({blogs}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {blogs.map((blog) => (
-        <li key={blog.id}>{blog.title}</li>
-      ))}
+      <EntryList blogData={blogs} />
     </div>
   );
 };
