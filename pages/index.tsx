@@ -1,9 +1,9 @@
-import axios from 'axios';
 import {GetStaticProps} from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import {EntryList} from '../components/EntryList';
 import {SideNavigation} from '../components/SideNavigation';
+import {IndexContext, IndexContextType} from '../contexts/IndexContext';
 import {BlogType} from '../types/BlogType';
 import {fetchBlogsData} from '../util/api/fetchBlogsData';
 
@@ -22,16 +22,19 @@ const Main = styled.main`
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetchBlogsData();
 
-  const blogs = (await response.data) as BlogType[];
+  const blogList = (await response.data) as BlogType[];
 
   return {
     props: {
-      blogs,
+      blogList,
     },
   };
 };
 
-const Index: React.FC<{blogs: BlogType[]}> = ({blogs}) => {
+const Index: React.FC<{blogList: BlogType[]}> = ({blogList}) => {
+  const contextValue: IndexContextType = {
+    blogList,
+  };
   return (
     <div className="container">
       <Head>
@@ -39,12 +42,14 @@ const Index: React.FC<{blogs: BlogType[]}> = ({blogs}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Wrapper>
-        <SideNavigation />
-        <Main>
-          <EntryList blogData={blogs} />
-        </Main>
-      </Wrapper>
+      <IndexContext.Provider value={contextValue}>
+        <Wrapper>
+          <SideNavigation />
+          <Main>
+            <EntryList />
+          </Main>
+        </Wrapper>
+      </IndexContext.Provider>
     </div>
   );
 };

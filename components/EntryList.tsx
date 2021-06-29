@@ -1,11 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
-import {BlogType} from '../types/BlogType';
+import {IndexContext} from '../contexts/IndexContext';
 import {Entry} from './Entry';
-
-interface P {
-  blogData: BlogType[];
-}
 
 const ListWrapper = styled.div`
   display: grid;
@@ -13,10 +9,15 @@ const ListWrapper = styled.div`
   align-content: start;
 `;
 
-export const EntryList: React.FC<P> = ({blogData}) => {
+export const EntryList: React.FC = () => {
+  const {blogList} = useContext(IndexContext);
+  console.log('blogList', blogList);
+
+  if (!blogList) return <div>loading...</div>;
+
   return (
     <ListWrapper>
-      {blogData.map((blog) => (
+      {blogList.map((blog) => (
         <Entry key={blog.id} entryData={blog} />
       ))}
     </ListWrapper>
