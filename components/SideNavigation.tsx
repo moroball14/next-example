@@ -24,7 +24,7 @@ const JobParagraph = styled.p`
   color: #7979a9;
 `;
 
-export const SideNavigation = () => {
+export const SideNavigation: React.FC = () => {
   return (
     <NavigationWrapper>
       <AuthorWrapper>Daiki Morokoshi</AuthorWrapper>

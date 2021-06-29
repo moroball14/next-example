@@ -52,7 +52,7 @@ const EntryLink = styled.header`
 
 export const Entry: React.FC<P> = ({entryData: {id, title, body}}) => {
   return (
-    <Link href={`/entry/${id}`}>
+    <Link href={`/entry/${id}`} passHref>
       <EntryWrapper>
         <EntryHeader>
           <EntryMedium>{id}</EntryMedium>
