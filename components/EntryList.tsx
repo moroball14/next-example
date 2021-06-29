@@ -11,7 +11,6 @@ const ListWrapper = styled.div`
 
 export const EntryList: React.FC = () => {
   const {blogList} = useContext(IndexContext);
-  console.log('blogList', blogList);
 
   if (!blogList) return <div>loading...</div>;
 
