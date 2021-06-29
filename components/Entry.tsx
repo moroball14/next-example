@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import {BlogType} from '../types/BlogType';
@@ -51,12 +52,14 @@ const EntryLink = styled.header`
 
 export const Entry: React.FC<P> = ({entryData: {id, title, body}}) => {
   return (
-    <EntryWrapper>
-      <EntryHeader>
-        <EntryMedium>{id}</EntryMedium>
-      </EntryHeader>
-      <EntryTitle>{title}</EntryTitle>
-      <EntryLink>{body}</EntryLink>
-    </EntryWrapper>
+    <Link href={`/entry/${id}`}>
+      <EntryWrapper>
+        <EntryHeader>
+          <EntryMedium>{id}</EntryMedium>
+        </EntryHeader>
+        <EntryTitle>{title}</EntryTitle>
+        <EntryLink>{body}</EntryLink>
+      </EntryWrapper>
+    </Link>
   );
 };
