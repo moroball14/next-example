@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {EntryList} from '../components/EntryList';
 import {SideNavigation} from '../components/SideNavigation';
 import {BlogType} from '../types/BlogType';
+import {fetchBlogsData} from '../util/api/fetchBlogsData';
 
 const Wrapper = styled.div`
   display: grid;
@@ -19,9 +20,7 @@ const Main = styled.main`
 `;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await axios.get(
-    'https://jsonplaceholder.typicode.com/posts',
-  );
+  const response = await fetchBlogsData();
 
   const blogs = (await response.data) as BlogType[];
 
