@@ -5,7 +5,7 @@ import {HeaderItem} from './HeaderItem';
 
 export const Header: React.FC = () => {
   return (
-    <nav className="flex flex-col items-center justify-center flex-wrap bg-white lg:justify-between lg:flex-row">
+    <nav className="flex flex-col items-center justify-center flex-wrap bg-white pb-6 lg:justify-between lg:flex-row lg:pb-0">
       <div className="flex items-center flex-no-shrink">
         <Image src={logo} alt={'fwywd'} width={200} height={100} />
       </div>

@@ -1,6 +1,5 @@
 import {GetStaticProps} from 'next';
 import {BasePage} from '../components/base/BasePage';
-import {EntryList} from '../components/index/EntryList';
 import {IndexContext, IndexContextType} from '../contexts/IndexContext';
 import {EntryType} from '../types/EntryType';
 import {fetchEntriesData} from '../util/api/fetchEntriesData';
@@ -23,9 +22,8 @@ const IndexPage: React.FC<{entryList: EntryType[]}> = ({entryList}) => {
   };
   return (
     <IndexContext.Provider value={contextValue}>
-      <BasePage>
-        <EntryList />
-      </BasePage>
+      <BasePage />
+      {/* <EntryList /> */}
     </IndexContext.Provider>
   );
 };

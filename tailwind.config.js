@@ -21,6 +21,9 @@ module.exports = {
         dark: '#4e8e8d', // 使用するときは、bg-pink-dark
       },
     },
+    backgroundImage: () => ({
+      hero: "url('../public/hero.png')",
+    }),
   },
   variants: {
     extend: {},

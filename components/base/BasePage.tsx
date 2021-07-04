@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 //   padding: 127px 80px;
 // `;
 
-export const BasePage: React.FC = ({children}) => {
+export const BasePage: React.FC = () => {
   return (
     <div>
       <Head>
@@ -24,9 +24,11 @@ export const BasePage: React.FC = ({children}) => {
 
       <Header />
       <Wrapper>
+        <div className="bg-hero bg-no-repeat bg-contain bg-bottom bg-teal-dark h-screen w-screen lg:bg-auto">
+          fsafgrgg
+        </div>
         {/* <SideNavigation />
         <Main>{children}</Main> */}
-        {children}
       </Wrapper>
     </div>
   );
