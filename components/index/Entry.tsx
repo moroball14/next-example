@@ -31,14 +31,14 @@ const EntryMedium = styled.div`
 
 const EntryTitle = styled.h2`
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
   line-height: 150%;
   color: #30345f;
 `;
 
 const EntryLink = styled.header`
-  font-weight: 500;
+  font-weight: bold;
   font-size: 11px;
   color: #3f3f9d;
 `;
