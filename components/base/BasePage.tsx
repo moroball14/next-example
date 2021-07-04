@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 export const BasePage: React.FC = ({children}) => {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
