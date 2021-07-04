@@ -1,22 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
-import {BlogType} from '../types/BlogType';
+import {articleStyle} from '../../styles/mixin/_article';
+import {BlogType} from '../../types/BlogType';
 
 interface P {
   entryData: BlogType;
 }
 
 const EntryWrapper = styled.div`
-  width: 720px;
-  left: 440px;
-  top: 80px;
-  background: #ffffff;
-  border: 1px solid #f1f3fa;
-  box-sizing: border-box;
-  box-shadow: 2px 8px 30px rgba(48, 55, 120, 0.04);
-  border-radius: 14px;
-  padding: 32px 24px;
+  ${articleStyle}
 `;
 
 const EntryHeader = styled.header`

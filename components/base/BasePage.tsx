@@ -11,8 +11,7 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   background: #f8f9fc;
-  padding-top: 127px;
-  padding-left: 80px;
+  padding: 127px 80px;
 `;
 
 export const BasePage: React.FC = ({children}) => {

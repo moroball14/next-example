@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components';
-import {IndexContext} from '../contexts/IndexContext';
+import {IndexContext} from '../../contexts/IndexContext';
 import {Entry} from './Entry';
 
 const ListWrapper = styled.div`

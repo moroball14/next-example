@@ -1,6 +1,6 @@
 import {GetStaticProps} from 'next';
 import {BasePage} from '../components/base/BasePage';
-import {EntryList} from '../components/EntryList';
+import {EntryList} from '../components/index/EntryList';
 import {IndexContext, IndexContextType} from '../contexts/IndexContext';
 import {BlogType} from '../types/BlogType';
 import {fetchBlogsData} from '../util/api/fetchBlogsData';
@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Index: React.FC<{blogList: BlogType[]}> = ({blogList}) => {
+const IndexPage: React.FC<{blogList: BlogType[]}> = ({blogList}) => {
   const contextValue: IndexContextType = {
     blogList,
   };
@@ -30,4 +30,4 @@ const Index: React.FC<{blogList: BlogType[]}> = ({blogList}) => {
   );
 };
 
-export default Index;
+export default IndexPage;
