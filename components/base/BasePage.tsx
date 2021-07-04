@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
-import {SideNavigation} from '../SideNavigation';
+import {Header} from './Header';
 
 const Wrapper = styled.div`
   display: grid;
@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
-const Main = styled.main`
-  background: #f8f9fc;
-  padding: 127px 80px;
-`;
+// const Main = styled.main`
+//   background: #f8f9fc;
+//   padding: 127px 80px;
+// `;
 
 export const BasePage: React.FC = ({children}) => {
   return (
@@ -22,9 +22,11 @@ export const BasePage: React.FC = ({children}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <Wrapper>
-        <SideNavigation />
-        <Main>{children}</Main>
+        {/* <SideNavigation />
+        <Main>{children}</Main> */}
+        {children}
       </Wrapper>
     </div>
   );
