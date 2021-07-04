@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -27,7 +28,9 @@ const JobParagraph = styled.p`
 export const SideNavigation: React.FC = () => {
   return (
     <NavigationWrapper>
-      <AuthorWrapper>Daiki Morokoshi</AuthorWrapper>
+      <AuthorWrapper>
+        <Link href="/">Daiki Morokoshi</Link>
+      </AuthorWrapper>
 
       <JobParagraph>Frontend Developer</JobParagraph>
     </NavigationWrapper>

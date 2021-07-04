@@ -10,14 +10,14 @@ const ListWrapper = styled.div`
 `;
 
 export const EntryList: React.FC = () => {
-  const {blogList} = useContext(IndexContext);
+  const {entryList} = useContext(IndexContext);
 
-  if (!blogList) return <div>loading...</div>;
+  if (!entryList) return <div>loading...</div>;
 
   return (
     <ListWrapper>
-      {blogList.map((blog) => (
-        <Entry key={blog.id} entryData={blog} />
+      {entryList.map((entry) => (
+        <Entry key={entry.id} entryData={entry} />
       ))}
     </ListWrapper>
   );

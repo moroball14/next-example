@@ -2,24 +2,24 @@ import {GetStaticProps} from 'next';
 import {BasePage} from '../components/base/BasePage';
 import {EntryList} from '../components/index/EntryList';
 import {IndexContext, IndexContextType} from '../contexts/IndexContext';
-import {BlogType} from '../types/BlogType';
-import {fetchBlogsData} from '../util/api/fetchBlogsData';
+import {EntryType} from '../types/EntryType';
+import {fetchEntriesData} from '../util/api/fetchEntriesData';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetchBlogsData();
+  const response = await fetchEntriesData();
 
-  const blogList = (await response.data) as BlogType[];
+  const entryList = (await response.data) as EntryType[];
 
   return {
     props: {
-      blogList,
+      entryList: entryList,
     },
   };
 };
 
-const IndexPage: React.FC<{blogList: BlogType[]}> = ({blogList}) => {
+const IndexPage: React.FC<{entryList: EntryType[]}> = ({entryList}) => {
   const contextValue: IndexContextType = {
-    blogList,
+    entryList,
   };
   return (
     <IndexContext.Provider value={contextValue}>

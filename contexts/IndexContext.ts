@@ -1,10 +1,10 @@
 import {createContext} from 'react';
-import {BlogType} from '../types/BlogType';
+import {EntryType} from '../types/EntryType';
 
 export type IndexContextType = {
-  blogList?: BlogType[];
+  entryList?: EntryType[];
 };
 
 export const IndexContext = createContext<IndexContextType>({
-  blogList: undefined,
+  entryList: undefined,
 });

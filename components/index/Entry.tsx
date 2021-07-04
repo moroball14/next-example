@@ -2,10 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import {articleStyle} from '../../styles/mixin/_article';
-import {BlogType} from '../../types/BlogType';
+import {EntryType} from '../../types/EntryType';
 
 interface P {
-  entryData: BlogType;
+  entryData: EntryType;
 }
 
 const EntryWrapper = styled.div`
