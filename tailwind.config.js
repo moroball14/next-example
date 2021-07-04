@@ -18,7 +18,7 @@ module.exports = {
       teal: {
         light: '#6ccccc', // 使用するときは、bg-pink-light
         DEFAULT: '#6bc3c4', // 使用するときは、bg-pink
-        dark: '#6ac2c3', // 使用するときは、bg-pink-dark
+        dark: '#4e8e8d', // 使用するときは、bg-pink-dark
       },
     },
   },
