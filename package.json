@@ -32,8 +32,9 @@
     "typescript": "4.3.4"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn lint"
+    "*": [
+      "yarn lint",
+      "yarn run check"
     ]
   }
 }
