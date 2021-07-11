@@ -24,6 +24,7 @@ module.exports = {
     backgroundImage: () => ({
       hero: "url('../public/hero.png')",
       about: "url('../public/bg-about.png')",
+      skillsSp: "url('../public/bg-skills-sp.png')",
     }),
   },
   variants: {
