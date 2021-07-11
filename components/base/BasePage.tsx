@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
-import {Title} from './Title';
+import {Title} from './FirstView';
 import {Header} from './Header';
 
 const Wrapper = styled.div`

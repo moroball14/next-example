@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import hero from '../../public/hero.png';
 
-export const Title: React.FC = () => {
+export const FirstView: React.FC = () => {
   return (
     <div className="flex flex-col justify-between space-y-4 bg-teal-dark w-screen  p-8 md:bg-auto md:flex-row md:px-12">
       <div className="flex justify-center">
