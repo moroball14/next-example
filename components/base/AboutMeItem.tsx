@@ -15,17 +15,14 @@ export const AboutMeItem: React.FC<P> = ({
   description,
 }) => {
   return (
-    <div>
-      <div>
-        {/* 写真 */}
+    <div className="max-w-sm space-y-3">
+      <div className="flex justify-center">
         <Image src={image} alt={altImage} />
       </div>
-      <div>
-        {/* 私についての要素 */}
+      <div className="flex justify-center font-bold text-3xl text-center">
         {topic}
       </div>
-      <div>
-        {/* 私についての要素の説明 */}
+      <div className="break-words leading-loose text-gray-500">
         {description}
       </div>
     </div>
