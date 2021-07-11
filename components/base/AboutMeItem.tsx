@@ -15,7 +15,7 @@ export const AboutMeItem: React.FC<P> = ({
   description,
 }) => {
   return (
-    <div className="max-w-sm space-y-3">
+    <div className="max-w-sm space-y-6 self-center">
       <div className="flex justify-center">
         <Image src={image} alt={altImage} />
       </div>
