@@ -23,6 +23,7 @@ module.exports = {
     },
     backgroundImage: () => ({
       hero: "url('../public/hero.png')",
+      about: "url('../public/bg-about.png')",
     }),
   },
   variants: {
