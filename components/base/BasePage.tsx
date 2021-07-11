@@ -1,14 +1,15 @@
 import Head from 'next/head';
 import React from 'react';
-import styled from 'styled-components';
-import {Title} from './FirstView';
+// import styled from 'styled-components';
+import {AboutMe} from './AboutMe';
+import {FirstView} from './FirstView';
 import {Header} from './Header';
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 312px 1fr;
-  height: 100%;
-`;
+// const Wrapper = styled.div`
+//   display: grid;
+//   grid-template-columns: 312px 1fr;
+//   height: 100%;
+// `;
 
 // const Main = styled.main`
 //   background: #f8f9fc;
@@ -24,11 +25,12 @@ export const BasePage: React.FC = () => {
       </Head>
 
       <Header />
-      <Wrapper>
-        <Title />
-        {/* <SideNavigation />
+      <FirstView />
+      <AboutMe />
+      {/* <Wrapper> */}
+      {/* <SideNavigation />
         <Main>{children}</Main> */}
-      </Wrapper>
+      {/* </Wrapper> */}
     </div>
   );
 };
