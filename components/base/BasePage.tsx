@@ -4,6 +4,7 @@ import React from 'react';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
 import {Header} from './Header';
+import {Skills} from './Skills';
 
 // const Wrapper = styled.div`
 //   display: grid;
@@ -27,6 +28,7 @@ export const BasePage: React.FC = () => {
       <Header />
       <FirstView />
       <AboutMe />
+      <Skills />
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}
