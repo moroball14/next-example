@@ -21,7 +21,7 @@ export const AboutMeItem: React.FC<P> = ({
           <Image src={image} alt={altImage} />
         </div>
       </div>
-      <div className="flex justify-center font-bold text-3xl text-center">
+      <div className="flex justify-center font-bold text-teal-dark text-3xl text-center">
         <div className="h-12 flex flex-wrap content-center">{topic}</div>
       </div>
       <div className="break-words leading-loose text-gray-500">
