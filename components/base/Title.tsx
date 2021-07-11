@@ -7,8 +7,11 @@ interface P {
 
 export const Title: React.FC<P> = ({titleJa, titleEn}) => {
   return (
-    <div>
-      {titleJa}と{titleEn}
+    <div className="flex justify-center py-6">
+      <div className="flex flex-col space-y-1 self-center md:flex-row">
+        <div className="font-bold text-3xl text-center">{titleJa}</div>
+        <div className="text-teal-dark text-2xl text-center">{titleEn}</div>
+      </div>
     </div>
   );
 };

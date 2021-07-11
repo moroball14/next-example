@@ -6,7 +6,7 @@ import about1 from '../../public/about-1.png';
 export const AboutMe: React.FC = () => {
   return (
     <div>
-      <Title titleJa={'私について'} titleEn={'About me'} />
+      <Title titleJa={'私について'} titleEn={'About'} />
       <div>
         <AboutMeItem
           image={about1}
