@@ -6,7 +6,7 @@ import {SkillBarBlock} from './SkillBarBlock';
 
 export const Skills: React.FC = () => {
   return (
-    <div className="px-4 py-4 pb-16 bg-skillsSp bg-cover bg-no-repeat md:px-10 md:py-14">
+    <div className="px-4 py-4 pb-16 bg-skillsSp bg-cover bg-no-repeat md:px-10 md:py-14 md:bg-skills">
       <Title id={'skills'} titleJa={'スキル'} titleEn={'SKILLS'} />
       <div className="flex flex-col space-y-4 md:flex-row md:space-x-8">
         <div className="flex flex-wrap content-center">
