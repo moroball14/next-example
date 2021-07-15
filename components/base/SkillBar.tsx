@@ -1,14 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export const SkillBar: React.FC = () => {
+const Bar = styled.div<{width: number}>`
+  width: ${(props) => `${props.width}%`};
+`;
+
+interface P {
+  skill: string;
+  percent: number;
+}
+
+export const SkillBar: React.FC<P> = ({skill, percent}) => {
   return (
     <div className="space-y-2">
-      <div className="text-teal-dark text-2xl">React</div>
+      <div className="text-teal-dark text-2xl">{skill}</div>
       <div className="flex justify-between w-full space-x-2">
         <div className="w-full bg-teal-light rounded">
-          <div className="w-1/5 h-full bg-teal rounded"></div>
+          <Bar className="h-full bg-teal rounded" width={percent} />
         </div>
-        <div className="text-teal">20%</div>
+        <div className="text-teal">{percent}%</div>
       </div>
     </div>
   );
