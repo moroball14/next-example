@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from 'tailwind-styled-components';
 
-const Bar = styled.div<{width: number}>`
+const BarBase = styled.div<{width: number}>`
   width: ${(props) => `${props.width}%`};
+`;
+
+const Bar = tw(BarBase)`
+  h-full
+  bg-teal
+  rounded
 `;
 
 interface P {
@@ -16,7 +23,7 @@ export const SkillBar: React.FC<P> = ({skill, percent}) => {
       <div className="text-teal-dark text-2xl">{skill}</div>
       <div className="flex justify-between w-full space-x-2">
         <div className="w-full bg-teal-light rounded">
-          <Bar className="h-full bg-teal rounded" width={percent} />
+          <Bar width={percent} />
         </div>
         <div className="text-teal">{percent}%</div>
       </div>
