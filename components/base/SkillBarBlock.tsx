@@ -3,14 +3,16 @@ import {SkillBar} from './SkillBar';
 
 export const SkillBarBlock: React.FC = () => {
   const skillSet = [
-    {skill: 'React', percent: 40},
-    {skill: 'Typescript', percent: 20},
+    {name: 'React', percent: 40},
+    {name: 'Typescript', percent: 40},
+    {name: 'Firebase', percent: 30},
+    {name: 'Ruby on Rails', percent: 20},
   ];
 
   return (
     <div className="bg-white p-6 rounded space-y-6">
-      {skillSet.map(({skill, percent}, index) => (
-        <SkillBar skill={skill} percent={percent} key={index} />
+      {skillSet.map(({name, percent}, index) => (
+        <SkillBar name={name} percent={percent} key={index} />
       ))}
     </div>
   );

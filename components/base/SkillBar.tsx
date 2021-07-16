@@ -13,14 +13,14 @@ const Bar = tw(BarBase)`
 `;
 
 interface P {
-  skill: string;
+  name: string;
   percent: number;
 }
 
-export const SkillBar: React.FC<P> = ({skill, percent}) => {
+export const SkillBar: React.FC<P> = ({name, percent}) => {
   return (
     <div className="space-y-2">
-      <div className="text-teal-dark text-2xl">{skill}</div>
+      <div className="text-teal-dark text-2xl">{name}</div>
       <div className="flex justify-between w-full space-x-2">
         <div className="w-full bg-teal-light rounded">
           <Bar width={percent} />
