@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
       <div className="flex items-center flex-no-shrink">
         <Image src={logo} alt={'fwywd'} width={200} height={100} />
       </div>
-      <div className="block flex items-center md:w-auto">
+      <div className="block items-center md:w-auto">
         <div className="flex flex-row justify-between px-12 w-screen md:w-auto md:px-0">
           <HeaderItem href={'about'} title={'ABOUT'} />
           <HeaderItem href={'skills'} title={'SKILLS'} />
