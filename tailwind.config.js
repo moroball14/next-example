@@ -21,6 +21,11 @@ module.exports = {
         dark: '#3ac3bd', // 使用するときは、bg-pink-dark
       },
     },
+    extend: {
+      inset: {
+        '9/10': '90%',
+      },
+    },
     backgroundImage: () => ({
       hero: "url('../public/hero.png')",
       about: "url('../public/bg-about.png')",

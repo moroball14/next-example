@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import tw from 'tailwind-styled-components';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
@@ -17,6 +18,10 @@ import {Skills} from './Skills';
 //   padding: 127px 80px;
 // `;
 
+const Wrapper = tw.div`
+relative
+`;
+
 export const BasePage: React.FC = () => {
   return (
     <div>
@@ -27,8 +32,10 @@ export const BasePage: React.FC = () => {
 
       <Header />
       <FirstView />
-      <AboutMe />
-      <Skills />
+      <Wrapper>
+        <AboutMe />
+        <Skills />
+      </Wrapper>
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}
