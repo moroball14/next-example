@@ -49,7 +49,7 @@ export const Values: React.FC = () => {
   return (
     <ValueWrapper>
       <Title id={'values'} titleJa={'価値観'} titleEn={'VALUES'} />
-      <div className="flex justify-center">
+      <div className="flex justify-center bg-white rounded-lg">
         <div className="flex flex-col w-screen space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:p-4">
           {values.map(({image, altImage, topic, description}, index) => {
             const isBorder = values.length - 1 !== index;

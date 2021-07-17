@@ -18,7 +18,7 @@ export const Value: React.FC<P> = ({
 }) => {
   return (
     <div
-      className={`max-w-sm space-y-6 self-center md:self-start md:p-4 md:h-full ${
+      className={`max-w-sm space-y-6 p-4 self-center md:self-start md:h-full ${
         isBorder ? 'md:border-r-2 md:border-teal-light' : 'md:border-r-0'
       }`}
     >
