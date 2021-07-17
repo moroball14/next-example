@@ -4,6 +4,7 @@ import React from 'react';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
+import {Future} from './Future';
 import {Header} from './Header';
 import {Skills} from './Skills';
 import {Values} from './Values';
@@ -32,6 +33,7 @@ export const BasePage: React.FC = () => {
       <AboutMe />
       <Skills />
       <Values />
+      <Future />
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}
