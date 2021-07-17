@@ -12,9 +12,15 @@ const SkillWrapper = tw.div`
   bg-skillsSp
   bg-cover
   bg-no-repeat
-  md:px-10
   md:py-14
   md:bg-skills
+  md:bg-center
+  md:pb-24
+  md:bg-cover
+  lg:pb-20
+  md:px-32
+  lg:px-52
+  xl:px-64
 `;
 
 export const Skills: React.FC = () => {

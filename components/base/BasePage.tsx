@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
+import tw from 'tailwind-styled-components';
 // import tw from 'tailwind-styled-components';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
+import {Future} from './Future';
 import {Header} from './Header';
 import {Skills} from './Skills';
 import {Values} from './Values';
@@ -19,6 +21,14 @@ import {Values} from './Values';
 //   padding: 127px 80px;
 // `;
 
+const ValueFutureWrapper = tw.div`
+  bg-futureSp
+  bg-cover
+  bg-no-repeat
+  bg-bottom
+  md:bg-future
+`;
+
 export const BasePage: React.FC = () => {
   return (
     <div>
@@ -31,7 +41,10 @@ export const BasePage: React.FC = () => {
       <FirstView />
       <AboutMe />
       <Skills />
-      <Values />
+      <ValueFutureWrapper>
+        <Values />
+        <Future />
+      </ValueFutureWrapper>
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}

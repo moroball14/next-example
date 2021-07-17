@@ -31,6 +31,8 @@ module.exports = {
       about: "url('../public/bg-about.png')",
       skillsSp: "url('../public/bg-skills-sp.png')",
       skills: "url('../public/bg-skills.png')",
+      futureSp: "url('../public/bg-future-sp.png')",
+      future: "url('../public/bg-future.png')",
     }),
   },
   variants: {
