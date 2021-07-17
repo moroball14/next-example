@@ -13,8 +13,8 @@ export const Header: React.FC = () => {
         <div className="flex flex-row justify-between px-12 w-screen md:w-auto md:px-0">
           <HeaderItem href={'about'} title={'ABOUT'} />
           <HeaderItem href={'skills'} title={'SKILLS'} />
-          <HeaderItem href={'about'} title={'VALUES'} />
-          <HeaderItem href={'about'} title={'FUTURE'} />
+          <HeaderItem href={'values'} title={'VALUES'} />
+          <HeaderItem href={'future'} title={'FUTURE'} />
         </div>
       </div>
     </nav>
