@@ -26,6 +26,7 @@ const ValueFutureWrapper = tw.div`
   bg-cover
   bg-no-repeat
   bg-bottom
+  md:bg-future
 `;
 
 export const BasePage: React.FC = () => {

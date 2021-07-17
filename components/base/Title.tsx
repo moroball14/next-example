@@ -1,10 +1,13 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 
-const Container = tw.div`
+const Container = tw.div<{
+  $isCenter: boolean;
+}>`
   flex
   justify-center
   py-6
+  ${(p) => (p.$isCenter ? 'md:justify-center' : 'md:justify-start')}
 `;
 
 const TitleWrapper = tw.div`
@@ -32,11 +35,12 @@ interface P {
   id: string;
   titleJa: string;
   titleEn: string;
+  isCenter?: boolean;
 }
 
-export const Title: React.FC<P> = ({id, titleJa, titleEn}) => {
+export const Title: React.FC<P> = ({id, titleJa, titleEn, isCenter = true}) => {
   return (
-    <Container id={id}>
+    <Container id={id} $isCenter={isCenter}>
       <TitleWrapper>
         <TitleJaWrapper>{titleJa}</TitleJaWrapper>
         <TitleEnWrapper>{titleEn}</TitleEnWrapper>
