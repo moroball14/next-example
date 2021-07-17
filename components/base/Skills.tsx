@@ -15,8 +15,6 @@ const SkillWrapper = tw.div`
   md:px-10
   md:py-14
   md:bg-skills
-  md:absolute
-  md:top-9/10
 `;
 
 export const Skills: React.FC = () => {
