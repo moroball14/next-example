@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import React from 'react';
-import tw from 'tailwind-styled-components';
+// import tw from 'tailwind-styled-components';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
 import {Header} from './Header';
 import {Skills} from './Skills';
+import {Values} from './Values';
 
 // const Wrapper = styled.div`
 //   display: grid;
@@ -18,10 +19,6 @@ import {Skills} from './Skills';
 //   padding: 127px 80px;
 // `;
 
-const Wrapper = tw.div`
-relative
-`;
-
 export const BasePage: React.FC = () => {
   return (
     <div>
@@ -32,10 +29,9 @@ export const BasePage: React.FC = () => {
 
       <Header />
       <FirstView />
-      <Wrapper>
-        <AboutMe />
-        <Skills />
-      </Wrapper>
+      <AboutMe />
+      <Skills />
+      <Values />
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}

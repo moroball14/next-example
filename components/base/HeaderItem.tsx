@@ -9,7 +9,7 @@ interface Props {
 export const HeaderItem: React.FC<Props> = ({href, title}) => {
   return (
     <Link href={`#${href}`}>
-      <a className="block text-1xl inline-block text-teal hover:text-teal-dark md:mr-4 md:text-2xl">
+      <a className="block text-1xl text-teal hover:text-teal-dark md:mr-4 md:text-2xl">
         {title}
       </a>
     </Link>
