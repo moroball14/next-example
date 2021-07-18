@@ -5,6 +5,7 @@ import tw from 'tailwind-styled-components';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
 import {FirstView} from './FirstView';
+import {Footer} from './Footer';
 import {Future} from './Future';
 import {Header} from './Header';
 import {Skills} from './Skills';
@@ -45,6 +46,7 @@ export const BasePage: React.FC = () => {
         <Values />
         <Future />
       </ValueFutureWrapper>
+      <Footer />
       {/* <Wrapper> */}
       {/* <SideNavigation />
         <Main>{children}</Main> */}

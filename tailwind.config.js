@@ -20,6 +20,9 @@ module.exports = {
         DEFAULT: '#8ed8cd', // 使用するときは、bg-pink
         dark: '#3ac3bd', // 使用するときは、bg-pink-dark
       },
+      navy: {
+        DEFAULT: '#30345f',
+      },
     },
     extend: {
       inset: {
