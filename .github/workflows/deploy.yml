@@ -1,5 +1,6 @@
 name: deploy website
-push:
+on: 
+  push:
     branches:
       - main
   pull_request:
