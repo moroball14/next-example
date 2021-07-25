@@ -1,23 +1,10 @@
 import React, {useMemo} from 'react';
-import tw from 'tailwind-styled-components';
 import value1 from '../../public/value1.png';
 import value2 from '../../public/value2.png';
 import value3 from '../../public/value3.png';
+import {Wrapper} from './template/Wrapper';
 import {Title} from './Title';
 import {Value} from './Value';
-
-const ValueWrapper = tw.div`
-  px-4
-  py-2
-  space-y-6
-  md:bg-center
-  md:pb-24
-  md:bg-cover
-  lg:pb-20
-  md:px-32
-  lg:px-52
-  xl:px-64
-`;
 
 export const Values: React.FC = () => {
   const values = useMemo(
@@ -47,7 +34,7 @@ export const Values: React.FC = () => {
   );
 
   return (
-    <ValueWrapper>
+    <Wrapper>
       <Title id={'values'} titleJa={'価値観'} titleEn={'VALUES'} />
       <div className="flex justify-center bg-white rounded-lg">
         <div className="flex flex-col w-screen space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:p-4">
@@ -66,6 +53,6 @@ export const Values: React.FC = () => {
           })}
         </div>
       </div>
-    </ValueWrapper>
+    </Wrapper>
   );
 };
