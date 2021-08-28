@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import tw from 'tailwind-styled-components';
+import {Loading} from '../common/Loading';
 // import tw from 'tailwind-styled-components';
 // import styled from 'styled-components';
 import {AboutMe} from './AboutMe';
@@ -31,6 +32,16 @@ const ValueFutureWrapper = tw.div`
 `;
 
 export const BasePage: React.FC = () => {
+  const [initialized, setInitialized] = useState(false);
+  const initialize = useCallback(async () => {
+    await new Promise((resolve) => setTimeout(resolve, 3000)); // 動作確認のためわざと3秒待つ
+    setInitialized(true);
+  }, []);
+
+  useEffect(() => {
+    initialize();
+  }, [initialize]);
+
   return (
     <div>
       <Head>
@@ -38,19 +49,27 @@ export const BasePage: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <FirstView />
-      <AboutMe />
-      <Skills />
-      <ValueFutureWrapper>
-        <Values />
-        <Future />
-      </ValueFutureWrapper>
-      <Footer />
-      {/* <Wrapper> */}
-      {/* <SideNavigation />
-        <Main>{children}</Main> */}
-      {/* </Wrapper> */}
+      {initialized ? (
+        <>
+          <Header />
+          <FirstView />
+          <AboutMe />
+          <Skills />
+          <ValueFutureWrapper>
+            <Values />
+            <Future />
+          </ValueFutureWrapper>
+          <Footer />
+          {/* <Wrapper> */}
+          {/* <SideNavigation />
+            <Main>{children}</Main> */}
+          {/* </Wrapper> */}
+        </>
+      ) : (
+        <div>
+          <Loading />
+        </div>
+      )}
     </div>
   );
 };
