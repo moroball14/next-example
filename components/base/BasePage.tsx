@@ -66,7 +66,7 @@ export const BasePage: React.FC = () => {
           {/* </Wrapper> */}
         </>
       ) : (
-        <div>
+        <div className="w-screen h-screen">
           <Loading />
         </div>
       )}
